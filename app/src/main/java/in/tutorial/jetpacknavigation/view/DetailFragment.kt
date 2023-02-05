@@ -29,11 +29,6 @@ class DetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         arguments?.let {
             dogUUID = DetailFragmentArgs.fromBundle(it).dogUUID
-            binding?.tvDetails?.text = dogUUID.toString()
-        }
-        binding?.btnList?.setOnClickListener {
-            val action = DetailFragmentDirections.actionListFragment()
-            Navigation.findNavController(it).navigate(action)
         }
     }
 }
